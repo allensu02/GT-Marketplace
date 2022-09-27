@@ -17,6 +17,10 @@ struct ContentView: View {
                 .font(.system(size: 30, weight: .bold, design: .default))
                 .foregroundColor(.cyan)
             
+            Text("Adi Krovi")
+                .font(.system(size: 30, weight: .bold, design: .default))
+                .foregroundColor(.purple)
+            
         }
         
     }
