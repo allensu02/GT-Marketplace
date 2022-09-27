@@ -16,6 +16,9 @@ struct ContentView: View {
             Text("Allen Su")
                 .font(.system(size: 30, weight: .bold, design: .default))
                 .foregroundColor(.cyan)
+            Text("Junseob Lee")
+                .font(.system(size: 30, weight: .bold, design: .default))
+                .foregroundColor(.cyan)
             
         }
         
