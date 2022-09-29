@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var productName: String = ""
     var body: some View {
-        VStack {
-            Text("Hello, GT Marketplace")
-                .padding()
-                .font(.system(size: 40, weight: .bold, design: .default))
-            Text("Mina Um")
-                .font(.system(size: 30, weight: .bold, design: .default))
-                .foregroundColor(.cyan)
-            
-        }
-        
+            NavigationView {
+                VStack(alignment: .center, spacing: 90) {
+                    Form {
+                        TextField("Name", text:$productName)
+                    }
+                }
+                .textFieldStyle(.roundedBorder)
+                .navigationTitle("Add Item")
+
+            }
     }
 }
 
