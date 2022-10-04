@@ -39,7 +39,7 @@ struct SwiftUIView: View {
             Button {
                 next()
             } label: {
-                Image(systemName: "chevron.left")
+                Image(systemName: "chevron.right")
             }
         }
     }
@@ -51,7 +51,7 @@ struct SwiftUIView: View {
                     ForEach(1..<numberOfImages + 1, id: \.self){ num in
                         Image("\(num)")
                             .resizable()
-                            .scaledToFit()
+                            .scaledToFill()
                             .overlay(Color.black.opacity(0.4))
                             .tag(num)
                         
