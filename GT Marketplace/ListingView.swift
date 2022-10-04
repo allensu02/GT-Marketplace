@@ -10,7 +10,7 @@ import SwiftUI
 struct ListingView: View {
     var body: some View {
         VStack {
-            Text("Listings")
+            
         }
     }
 }
