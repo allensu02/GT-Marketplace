@@ -19,7 +19,9 @@ struct ListingView: View {
     var body: some View {
         NavigationView {
             List(listings) {
-                Listing in listingView(listing: Listing)
+                Listing in NavigationLink(destination: SwiftUIView()) {
+                    listingView(listing: Listing)
+                }
                     
             }
             .navigationBarTitle("Listings", displayMode: .large)
