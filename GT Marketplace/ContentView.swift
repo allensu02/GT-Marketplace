@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var productName: String = ""
+//    @State var productName: String = ""
     var body: some View {
         VStack {
             Text("Hello, GT Marketplace")

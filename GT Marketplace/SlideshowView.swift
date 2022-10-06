@@ -12,6 +12,7 @@ struct SwiftUIView: View {
     private  let timer = Timer.publish(every: 3, on:
             .main, in: .common).autoconnect()
     @State private var currentIndex = 0;
+    @State var productName: String = ""
     
     func previous() {
         withAnimation {
@@ -47,6 +48,16 @@ struct SwiftUIView: View {
     var body: some View {
         GeometryReader { proxy in
             VStack {
+                NavigationView {
+                    VStack(alignment: .center, spacing: 1) {
+                        Form {
+                            TextField("Name", text:$productName)
+                        }
+                    }
+                    .textFieldStyle(.roundedBorder)
+                    .navigationTitle("Add Item")
+
+                }
                 TabView(selection: $currentIndex) {
                     ForEach(1..<numberOfImages + 1, id: \.self){ num in
                         Image("\(num)")
