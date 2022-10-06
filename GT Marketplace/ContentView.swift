@@ -20,6 +20,17 @@ struct ContentView: View {
                 .navigationTitle("Add Item")
 
             }
+        VStack {
+            Text("Hello, GT Marketplace")
+                .padding()
+                .font(.system(size: 40, weight: .bold, design: .default))
+            Text("Mina Um")
+                .font(.system(size: 30, weight: .bold, design: .default))
+                .foregroundColor(.cyan)
+            Text("Yoon Ji :>").foregroundColor(.purple).font(.system(size: 30, weight: .bold, design: .default))
+            
+            
+        }
     }
 }
 
