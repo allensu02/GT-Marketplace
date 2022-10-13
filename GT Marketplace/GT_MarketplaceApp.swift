@@ -11,7 +11,6 @@ import SwiftUI
 struct GT_MarketplaceApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
         }
     }
 }
