@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		518F3CA128E65B4B0046F8EB /* SlideshowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518F3CA028E65B4B0046F8EB /* SlideshowView.swift */; };
+		5E78FCAC28F8CF150097DD3B /* ListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78FCAB28F8CF150097DD3B /* ListingView.swift */; };
 		BE17A9AD28E3A4B9005689E8 /* GT_MarketplaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE17A9AC28E3A4B9005689E8 /* GT_MarketplaceApp.swift */; };
 		BE17A9AF28E3A4B9005689E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE17A9AE28E3A4B9005689E8 /* ContentView.swift */; };
 		BE17A9B128E3A4BC005689E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE17A9B028E3A4BC005689E8 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		518F3CA028E65B4B0046F8EB /* SlideshowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideshowView.swift; sourceTree = "<group>"; };
+		5E78FCAB28F8CF150097DD3B /* ListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingView.swift; sourceTree = "<group>"; };
 		BE17A9A928E3A4B9005689E8 /* GT Marketplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GT Marketplace.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE17A9AC28E3A4B9005689E8 /* GT_MarketplaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GT_MarketplaceApp.swift; sourceTree = "<group>"; };
 		BE17A9AE28E3A4B9005689E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				BE17A9AE28E3A4B9005689E8 /* ContentView.swift */,
 				BE17A9B028E3A4BC005689E8 /* Assets.xcassets */,
 				BE17A9B228E3A4BC005689E8 /* Preview Content */,
+				5E78FCAB28F8CF150097DD3B /* ListingView.swift */,
 			);
 			path = "GT Marketplace";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE17A9AF28E3A4B9005689E8 /* ContentView.swift in Sources */,
+				5E78FCAC28F8CF150097DD3B /* ListingView.swift in Sources */,
 				BE17A9AD28E3A4B9005689E8 /* GT_MarketplaceApp.swift in Sources */,
 				518F3CA128E65B4B0046F8EB /* SlideshowView.swift in Sources */,
 			);
