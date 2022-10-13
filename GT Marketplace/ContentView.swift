@@ -16,6 +16,7 @@ struct ContentView: View {
             Text("Shreya Malpani")
                 .font(.system(size: 30, weight: .bold, design: .default))
                 .foregroundColor(.cyan)
+            
         }
     }
 }
