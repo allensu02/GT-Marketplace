@@ -12,12 +12,14 @@ struct ItemTileView: View {
     var body: some View {
         HStack {
             VStack {
-                Image("hoodie")
+                Image(item.picture)
                     .resizable()
             }
-            VStack {
+            VStack(alignment: .leading) {
                 Text(item.name)
+                    .font(.system(size: 22))
                     .bold()
+                    .padding(.bottom, 5)
                 Text(item.description)
                 Spacer()
                 HStack {
@@ -42,13 +44,13 @@ struct ItemTileView: View {
                 }
             }
         }
-        .frame(height: 200)
+        .frame(height: 175)
         .padding(15)
     }
 }
 
 struct ItemTileView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemTileView(item: Item(name: "GT Hoodie", description: "Yellow Georgia Tech Hoodie, Size M", likes: 2, comments: 0, isFavorited: false))
+        ItemTileView(item: Item(name: "GT Hoodie", description: "Yellow Georgia Tech Hoodie, Size M", picture: "hoodie", likes: 2, comments: 0, isFavorited: false))
     }
 }

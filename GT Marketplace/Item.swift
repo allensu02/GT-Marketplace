@@ -11,6 +11,7 @@ struct Item: Identifiable, Codable {
     var id = UUID()
     var name: String
     var description: String
+    var picture: String
     var likes: Int
     var comments: Int
     var isFavorited: Bool
