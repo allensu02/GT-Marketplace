@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import MapKit
+import UIKit
 
 struct CreateListingView: View {
     private var numberOfImages = 4
@@ -18,6 +20,7 @@ struct CreateListingView: View {
     @State private var value = 0
     @State private var priceToggle: Bool = false
     private let numberFormatter: NumberFormatter
+    
     
     func previous() {
         withAnimation {
@@ -78,32 +81,30 @@ struct CreateListingView: View {
                         next()
                     })
                 controls
+                TextField("Title", text: $username)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                HStack() {
+                    TextField("$0.00", value: $value, formatter: numberFormatter)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .keyboardType(.numberPad)
+                        .padding()
+                    Toggle(
+                        isOn: $priceToggle,
+                        label: {
+                        Text("Free")
+                    })
+                        .toggleStyle(SwitchToggleStyle(tint: Color.purple))
+                }
+                TextField("Description", text: $description)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                Text(category)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                //map features = address, gets the text field
             }
         }
-        VStack() {
-            TextField("Title", text: $username)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
-            HStack() {
-                TextField("$0.00", value: $value, formatter: numberFormatter)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .keyboardType(.numberPad)
-                    .padding()
-                Toggle(
-                    isOn: $priceToggle,
-                    label: {
-                    Text("Free")
-                })
-                    .toggleStyle(SwitchToggleStyle(tint: Color.purple))
-            }
-            TextField("Description", text: $description)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
-            Text(category)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
-            
-        }.padding()
     }
 }
 
