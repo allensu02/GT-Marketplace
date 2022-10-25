@@ -108,7 +108,7 @@ struct CreateListingView: View {
     }
 }
 
-struct ListingView_Previews: PreviewProvider {
+struct ListingsView_Previews: PreviewProvider {
     static var previews: some View {
         CreateListingView()
     }
