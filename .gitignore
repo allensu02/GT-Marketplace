@@ -1,1 +1,10 @@
+<<<<<<< HEAD
 GT Marketplace.xcodeproj/project.xcworkspace/xcuserdata/minaum.xcuserdatad/.DS_Store
+=======
+
+
+# misc
+/.DS_Store
+GT\ Marketplace.xcodeproj/xcuserdata/*
+GT\ Marketplace.xcodeproj/project.xcworkspace/xcuserdata/*
+>>>>>>> 5a00ed6d96a2ae8b8f53a18feb9f0149d1700c0b
