@@ -1,1 +1,6 @@
-GT Marketplace.xcodeproj/project.xcworkspace/xcuserdata/minaum.xcuserdatad/
+
+
+# misc
+/.DS_Store
+GT\ Marketplace.xcodeproj/xcuserdata/*
+GT\ Marketplace.xcodeproj/project.xcworkspace/xcuserdata/*
