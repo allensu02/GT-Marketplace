@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct GT_MarketplaceApp: App {
+    init() {
+      FirebaseApp.configure()
+    }
     var body: some Scene {
         WindowGroup {
-            CreateListingView()
+          CreateListingView()
         }
     }
 }
