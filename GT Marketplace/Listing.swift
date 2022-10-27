@@ -6,18 +6,27 @@
 //
 import SwiftUI
 
-struct Listing: Identifiable, Codable {
+struct Listing: Identifiable, Encodable {
     var id = UUID()
-    var name: String
-    var date: String
-    var price: Int
+    var title: String = ""
+    var date: String = ""
+    var price: Int = 0
 }
 
-struct listingView: View {
+extension Encodable {
+  var toDictionary: [String: Any]? {
+    guard let data = try? JSONEncoder().encode(self) else {
+      return nil
+    }
+    return try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
+  }
+}
+
+struct ListingCardView: View {
     var listing: Listing
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("Item: \(listing.name)")
+            Text("Item: \(listing.title)")
                 
             Text("Listing date: \(listing.date)")
                 
@@ -28,6 +37,6 @@ struct listingView: View {
 
 struct Listing_Previews: PreviewProvider {
     static var previews: some View {
-        listingView(listing: Listing(name: "TV", date: "August 5, 2022", price: 500))
+        ListingCardView(listing: Listing(title: "TV", date: "August 5, 2022", price: 500))
     }
 }

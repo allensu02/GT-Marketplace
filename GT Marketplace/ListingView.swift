@@ -9,9 +9,9 @@ import SwiftUI
 struct ListingView: View {
     
     let listings = [
-        Listing(name: "TV", date: "August 5, 2022", price: 500),
-        Listing(name: "Couch", date: "August 5, 2022", price: 100),
-        Listing(name: "Lamp", date: "August 5, 2022", price: 20),
+        Listing(title: "TV", date: "August 5, 2022", price: 500),
+        Listing(title: "Couch", date: "August 5, 2022", price: 100),
+        Listing(title: "Lamp", date: "August 5, 2022", price: 20),
     ]
     
     
@@ -19,7 +19,7 @@ struct ListingView: View {
         NavigationView {
             List(listings) {
                 Listing in NavigationLink(destination: SwiftUIView()) {
-                    listingView(listing: Listing)
+                    ListingCardView(listing: Listing)
                 }
                     
             }

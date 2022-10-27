@@ -14,12 +14,14 @@ struct CreateListingView: View {
     private  let timer = Timer.publish(every: 10, on:
             .main, in: .common).autoconnect()
     @State private var currentIndex = 0;
-    @State var username: String = ""
+    @State var title: String = ""
     @State var description: String = ""
     @State var category: String = "Category"
-    @State private var value = 0
+    @State private var price = 0
     @State private var priceToggle: Bool = false
     private let numberFormatter: NumberFormatter
+  
+    var model = Model()
     
     
     func previous() {
@@ -60,49 +62,53 @@ struct CreateListingView: View {
     }
     var body: some View {
         GeometryReader { proxy in
-            VStack {
-                Text("Listing Details")
-                    .padding()
-                TabView(selection: $currentIndex) {
-                    ForEach(1..<numberOfImages + 1, id: \.self){ num in
-                        Image("\(num)")
-                            .resizable()
-                            .scaledToFill()
-                            .overlay(Color.black.opacity(0.4))
-                            .tag(num)
-                        
-                    }
-                }.tabViewStyle(PageTabViewStyle())
-                    .clipShape(RoundedRectangle(cornerRadius: 5))
-                    .padding()
-                    .frame(width: proxy.size.width, height:
-                            proxy.size.height / 3)
-                    .onReceive(timer, perform: { _ in
-                        next()
-                    })
-                controls
-                TextField("Title", text: $username)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-                HStack() {
-                    TextField("$0.00", value: $value, formatter: numberFormatter)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .keyboardType(.numberPad)
-                        .padding()
-                    Toggle(
-                        isOn: $priceToggle,
-                        label: {
-                        Text("Free")
-                    })
-                        .toggleStyle(SwitchToggleStyle(tint: Color.purple))
+          VStack {
+              Text("Listing Details")
+                .padding()
+              TabView(selection: $currentIndex) {
+                ForEach(1..<numberOfImages + 1, id: \.self){ num in
+                  Image("\(num)")
+                    .resizable()
+                    .scaledToFill()
+                    .overlay(Color.black.opacity(0.4))
+                    .tag(num)
+                  
                 }
-                TextField("Description", text: $description)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-                Text(category)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-                //map features = address, gets the text field
+              }.tabViewStyle(PageTabViewStyle())
+                .clipShape(RoundedRectangle(cornerRadius: 5))
+                .padding()
+                .frame(width: proxy.size.width, height:
+                        proxy.size.height / 3)
+                .onReceive(timer, perform: { _ in
+                  next()
+                })
+              controls
+              TextField("Title", text: $title)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+              HStack() {
+                TextField("$0.00", value: $price, formatter: numberFormatter)
+                  .textFieldStyle(RoundedBorderTextFieldStyle())
+                  .keyboardType(.numberPad)
+                  .padding()
+                Toggle(
+                  isOn: $priceToggle,
+                  label: {
+                    Text("Free")
+                  })
+                .toggleStyle(SwitchToggleStyle(tint: Color.purple))
+              }
+              TextField("Description", text: $description)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+              Text(category)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+              Button {
+                model.pushListing(title: title, price: price)
+              } label: {
+                Text("Add Listing")
+              }
             }
         }
     }
