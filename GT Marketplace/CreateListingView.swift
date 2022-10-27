@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import MapKit
+import UIKit
 
 struct CreateListingView: View {
     private var numberOfImages = 4
@@ -20,6 +22,7 @@ struct CreateListingView: View {
     private let numberFormatter: NumberFormatter
   
     var model = Model()
+    
     
     func previous() {
         withAnimation {
