@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		431A5F6528E65F54007CEAC2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431A5F6428E65F54007CEAC2 /* ProfileView.swift */; };
 		BE17A9AD28E3A4B9005689E8 /* GT_MarketplaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE17A9AC28E3A4B9005689E8 /* GT_MarketplaceApp.swift */; };
 		BE17A9AF28E3A4B9005689E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE17A9AE28E3A4B9005689E8 /* ContentView.swift */; };
 		BE17A9B128E3A4BC005689E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE17A9B028E3A4BC005689E8 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		431A5F6428E65F54007CEAC2 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		BE17A9A928E3A4B9005689E8 /* GT Marketplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GT Marketplace.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE17A9AC28E3A4B9005689E8 /* GT_MarketplaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GT_MarketplaceApp.swift; sourceTree = "<group>"; };
 		BE17A9AE28E3A4B9005689E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				BE17A9AC28E3A4B9005689E8 /* GT_MarketplaceApp.swift */,
 				BE17A9AE28E3A4B9005689E8 /* ContentView.swift */,
+				431A5F6428E65F54007CEAC2 /* ProfileView.swift */,
 				BE17A9B028E3A4BC005689E8 /* Assets.xcassets */,
 				BE17A9B228E3A4BC005689E8 /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE17A9AF28E3A4B9005689E8 /* ContentView.swift in Sources */,
+				431A5F6528E65F54007CEAC2 /* ProfileView.swift in Sources */,
 				BE17A9AD28E3A4B9005689E8 /* GT_MarketplaceApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
