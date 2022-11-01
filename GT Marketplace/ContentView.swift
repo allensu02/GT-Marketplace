@@ -9,8 +9,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var productName: String = ""
     var body: some View {
         VStack {
+
             Spacer()
                 .frame(height: 350)
             Text("Prom Dress")
@@ -46,6 +48,12 @@ struct ContentView: View {
             Text("Clough Undergraduate Learning Commons")
                 .font(.system(size: 18))
                 .frame(maxWidth: 250, alignment: .leading)
+
+            Text("Hello, GT Marketplace")
+                .padding()
+                .font(.system(size: 40, weight: .bold, design: .default))
+
+ 
         }
     }
 }
