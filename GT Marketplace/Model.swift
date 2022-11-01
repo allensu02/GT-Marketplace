@@ -21,6 +21,16 @@ class Model: ObservableObject {
     ref.child(newListing.id.uuidString).setValue(newListing.toDictionary)
   }
   
+  func getListings() {
+    ref.getData(completion: { error, snapshot in
+      guard error == nil else {
+        print(error!.localizedDescription)
+        return;
+      }
+      print(snapshot)
+    })
+  }
+  
   func deleteListing(title: String) {
     
   }

@@ -7,6 +7,8 @@
 import SwiftUI
 
 struct ListingView: View {
+  
+  var model = Model()
     
     let listings = [
         Listing(title: "TV", date: "August 5, 2022", price: 500),
@@ -31,6 +33,12 @@ struct ListingView: View {
                 Listing in NavigationLink(destination: SwiftUIView()) {
                     ListingCardView(listing: Listing)
                 }
+              
+              Button {
+                model.getListings()
+              } label: {
+                Text("Get Listings")
+              }
                     
             }
             .navigationBarTitle("Listings", displayMode: .large)
