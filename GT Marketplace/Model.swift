@@ -20,5 +20,9 @@ class Model: ObservableObject {
     newListing.price = price
     ref.child(newListing.id.uuidString).setValue(newListing.toDictionary)
   }
+  
+  func deleteListing(title: String) {
+    
+  }
 }
 
