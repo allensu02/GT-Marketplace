@@ -7,6 +7,8 @@
 import SwiftUI
 
 struct ListingView: View {
+  
+  var model = Model()
     
     let listings = [
         Listing(title: "TV", date: "August 5, 2022", price: 500),
@@ -27,13 +29,18 @@ struct ListingView: View {
     
     var body: some View {
         NavigationView {
-            List(listings) {
-                Listing in NavigationLink(destination: SwiftUIView()) {
-                    ListingCardView(listing: Listing)
-                }
-                    
+          List(model.listings) { listing in
+            HStack {
+              //add code to show listings (already pulled from firebase)
             }
-            .navigationBarTitle("Listings", displayMode: .large)
+          }
+          .onAppear {
+            model.listentoRealtimeDatabase()
+          }
+          .onDisappear {
+            model.stopListening()
+          }
+          .navigationBarTitle("Listings", displayMode: .large)
         }
     }
 }
