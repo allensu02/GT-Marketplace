@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct Listing: Identifiable, Encodable, Decodable {
+struct Listing: Identifiable, Codable {
     var id = UUID()
     var title: String = ""
     var date: String = ""
