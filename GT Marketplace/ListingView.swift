@@ -29,19 +29,18 @@ struct ListingView: View {
     
     var body: some View {
         NavigationView {
-            List(listings) {
-                Listing in NavigationLink(destination: SwiftUIView()) {
-                    ListingCardView(listing: Listing)
-                }
-              
-              Button {
-                model.getListings()
-              } label: {
-                Text("Get Listings")
-              }
-                    
+          List(model.listings) { listing in
+            HStack {
+              //add code to show listings (already pulled from firebase)
             }
-            .navigationBarTitle("Listings", displayMode: .large)
+          }
+          .onAppear {
+            model.listentoRealtimeDatabase()
+          }
+          .onDisappear {
+            model.stopListening()
+          }
+          .navigationBarTitle("Listings", displayMode: .large)
         }
     }
 }

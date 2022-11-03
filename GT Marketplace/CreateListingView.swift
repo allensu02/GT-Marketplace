@@ -105,6 +105,7 @@ struct CreateListingView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
               Button {
+                
                 model.pushListing(title: title, price: price)
               } label: {
                 Text("Add Listing")
