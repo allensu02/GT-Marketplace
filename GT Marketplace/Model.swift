@@ -53,8 +53,8 @@ final class Model: ObservableObject {
       ref.child("Listings/" + newListing.id.uuidString).setValue(newListing.toDictionary)
     }
     
-    func deleteListing(id: String) {
-        ref.child("Listings/" + id).removeValue()
+    func deleteListing(id: UUID) {
+        ref.child("Listings/" + id.uuidString).removeValue()
     }
     
     func stopListening() {
