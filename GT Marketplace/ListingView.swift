@@ -32,6 +32,7 @@ struct ListingView: View {
     }
     func delete(at offsets: IndexSet) {
          model.listings.remove(atOffsets: offsets)
+      print(offsets)
     }
 }
 
