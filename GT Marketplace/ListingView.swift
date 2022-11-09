@@ -32,8 +32,9 @@ struct ListingView: View {
         }
     }
     func delete(at offsets: IndexSet) {
-         model.listings.remove(atOffsets: offsets)
-      print(offsets)
+        offsets.sorted(by: >).forEach { (i) in
+            model.deleteListing(id: model.listings[i].id)
+        }
     }
 }
 
