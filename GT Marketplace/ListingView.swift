@@ -21,6 +21,7 @@ struct ListingView: View {
                 }.onDelete(perform: delete)
             }
             .onAppear {
+                model.listings = []
                 model.listentoRealtimeDatabase()
             }.onDisappear {
                 model.stopListening()
@@ -34,7 +35,6 @@ struct ListingView: View {
         offsets.sorted(by: >).forEach { (i) in
             model.deleteListing(id: model.listings[i].id)
         }
-
     }
 }
 
