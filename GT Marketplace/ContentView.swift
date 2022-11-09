@@ -49,11 +49,9 @@ struct ContentView: View {
                 .font(.system(size: 18))
                 .frame(maxWidth: 250, alignment: .leading)
 
-            Text("Hello, GT Marketplace")
-                .padding()
-                .font(.system(size: 40, weight: .bold, design: .default))
-
- 
+//            Text("Hello, GT Marketplace")
+//                .padding()
+//                .font(.system(size: 40, weight: .bold, design: .default))
         }
     }
 }
