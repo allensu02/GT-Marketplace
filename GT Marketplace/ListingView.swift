@@ -21,6 +21,7 @@ struct ListingView: View {
                 }.onDelete(perform: delete)
             }
             .onAppear {
+                model.listings = []
                 model.listentoRealtimeDatabase()
             }.onDisappear {
                 model.stopListening()
