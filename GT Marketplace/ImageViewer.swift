@@ -8,7 +8,7 @@
 import SwiftUI
 import FirebaseStorage
 
-struct ImageView: View {
+struct ImageViewer: View {
   
   @State var isPickerShowing = false;
   @State var selectedImage: UIImage?
@@ -65,8 +65,8 @@ struct ImageView: View {
   }
 }
 
-struct ImageView_Previews: PreviewProvider {
+struct ImageViewer_Previews: PreviewProvider {
     static var previews: some View {
-        ImageView()
+        ImageViewer()
     }
 }
