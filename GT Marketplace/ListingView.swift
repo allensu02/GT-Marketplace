@@ -8,32 +8,32 @@ import SwiftUI
 
 struct ListingView: View {
     
-    let listings = [
-        Listing(title: "TV", date: "August 5, 2022", price: 500),
-        Listing(title: "Couch", date: "August 5, 2022", price: 100),
-        Listing(title: "Lamp", date: "August 5, 2022", price: 20),
-    ]
-  
-  func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-      return true
-  }
-
-  func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-      if (editingStyle == .delete) {
-          // removeListing function
-      }
-  }
-    
+    @StateObject private var model = Model()
     
     var body: some View {
         NavigationView {
-            List(listings) {
-                Listing in NavigationLink(destination: SwiftUIView()) {
-                    ListingCardView(listing: Listing)
-                }
-                    
+            
+            List{
+                ForEach(model.listings){
+                    Listing in NavigationLink(destination: SwiftUIView()) {
+                            ListingCardView(listing: Listing)
+                        }
+                }.onDelete(perform: delete)
             }
-            .navigationBarTitle("Listings", displayMode: .large)
+            .onAppear {
+                model.listings = []
+                model.listentoRealtimeDatabase()
+            }.onDisappear {
+                model.stopListening()
+            }
+            .navigationBarTitle("Listings")
+            .navigationBarItems(
+                trailing: NavigationLink(destination: CreateListingView(), label: {Image(systemName:"plus")}))
+        }
+    }
+    func delete(at offsets: IndexSet) {
+        offsets.sorted(by: >).forEach { (i) in
+            model.deleteListing(id: model.listings[i].id)
         }
     }
 }
