@@ -11,11 +11,13 @@ import Firebase
 struct AuthenticationView: View {
     @State private var email = ""
     @State private var password = ""
+    @State var showAlert = false
+    
     var body: some View {
         ZStack {
             
             VStack(spacing: 20) {
-                Text("New User")
+                Text("Create Account")
                     .foregroundColor(.black)
                     .font(.system(size: 40, weight: .bold, design: .rounded))
                     .offset(x: 0, y: -50)
@@ -44,7 +46,13 @@ struct AuthenticationView: View {
                     .frame(width: 350, height: 1)
                     .foregroundColor(.black)
                 Button {
-                    register()
+                    let text = email
+                    let isValid = checkEmail(email: email)
+                    if isValid == true {
+                        register()
+                    } else {
+                        showAlert = true
+                    }
                 } label: {
                     Text("Sign up")
                         .foregroundColor(.white)
@@ -55,6 +63,14 @@ struct AuthenticationView: View {
                         )
                         .foregroundColor(.black)
                 }
+                .alert(isPresented: $showAlert) {
+                    Alert(title: Text("Invalid Email"),
+                          message: Text("Try Again"),
+                          primaryButton: .default(Text("OK")) {
+                          },
+                          secondaryButton: .cancel(Text("Cancel"))
+                    )
+                }.padding()
                 .padding(.top)
                 .offset(y: 100)
                 
@@ -76,6 +92,16 @@ struct AuthenticationView: View {
             if error != nil {
                 print(error!.localizedDescription)
             }
+        }
+    }
+    
+    func checkEmail(email: String) -> Bool {
+        let indexOf = email.firstIndex(of: "@")
+        if indexOf != nil {
+            let dom = email.substring(from: indexOf!)
+            return dom == "@gatech.edu"
+        } else {
+            return false
         }
     }
     
