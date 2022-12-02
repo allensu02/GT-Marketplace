@@ -25,6 +25,8 @@
 		BE17A9AF28E3A4B9005689E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE17A9AE28E3A4B9005689E8 /* ContentView.swift */; };
 		BE17A9B128E3A4BC005689E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE17A9B028E3A4BC005689E8 /* Assets.xcassets */; };
 		BE17A9B428E3A4BC005689E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE17A9B328E3A4BC005689E8 /* Preview Assets.xcassets */; };
+		F80766D929246687009650A4 /* MessagesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80766D829246687009650A4 /* MessagesListView.swift */; };
+		F80766DB292466A8009650A4 /* MessageCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80766DA292466A8009650A4 /* MessageCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		BE17A9AE28E3A4B9005689E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BE17A9B028E3A4BC005689E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE17A9B328E3A4BC005689E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F80766D829246687009650A4 /* MessagesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesListView.swift; sourceTree = "<group>"; };
+		F80766DA292466A8009650A4 /* MessageCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 				5EBCAFA72908A4E300EFEE1D /* ListingView.swift */,
 				BB462DB3290B1A6C003B6597 /* Model.swift */,
 				5E78FCAE290B48FC0097DD3B /* MapModel.swift */,
+				F80766D829246687009650A4 /* MessagesListView.swift */,
+				F80766DA292466A8009650A4 /* MessageCellView.swift */,
 				5E78FCB02911D9DE0097DD3B /* LocationView.swift */,
 			);
 			path = "GT Marketplace";
@@ -193,8 +199,10 @@
 				BE17A9AF28E3A4B9005689E8 /* ContentView.swift in Sources */,
 				5E78FCAC28F8CF150097DD3B /* CreateListingView.swift in Sources */,
 				BBA00D91291B3ACB001782F3 /* NavigationBarView.swift in Sources */,
+				F80766D929246687009650A4 /* MessagesListView.swift in Sources */,
 				5EBCAFA62908A4BD00EFEE1D /* Listing.swift in Sources */,
 				BE17A9AD28E3A4B9005689E8 /* GT_MarketplaceApp.swift in Sources */,
+				F80766DB292466A8009650A4 /* MessageCellView.swift in Sources */,
 				518F3CA128E65B4B0046F8EB /* SlideshowView.swift in Sources */,
 				5E78FCB12911D9DE0097DD3B /* LocationView.swift in Sources */,
 				5EBCAFA82908A4E300EFEE1D /* ListingView.swift in Sources */,
