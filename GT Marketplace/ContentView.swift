@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ProfileView.swift
 //  GT Marketplace
 //
 //  Created by Allen Su on 9/27/22.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ProfileView: View {
     @State var productName: String = ""
     var body: some View {
       VStack {
@@ -56,8 +56,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ProfileView()
     }
 }

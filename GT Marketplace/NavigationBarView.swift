@@ -10,7 +10,7 @@ import SwiftUI
 struct NavigationBarView: View {
     var body: some View {
       TabView {
-        ContentView()
+        ProfileView()
           .tabItem {
             Text("Home")
           }

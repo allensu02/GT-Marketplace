@@ -15,7 +15,11 @@ struct GT_MarketplaceApp: App {
     }
     var body: some Scene {
         WindowGroup {
+<<<<<<< HEAD
           CreateListingView()
+=======
+          //ImageView()
+>>>>>>> 346f7c3 (rachel's changes)
         }
     }
 }

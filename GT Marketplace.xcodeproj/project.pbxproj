@@ -34,6 +34,7 @@
 		BE17A9AF28E3A4B9005689E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE17A9AE28E3A4B9005689E8 /* ContentView.swift */; };
 		BE17A9B128E3A4BC005689E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE17A9B028E3A4BC005689E8 /* Assets.xcassets */; };
 		BE17A9B428E3A4BC005689E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE17A9B328E3A4BC005689E8 /* Preview Assets.xcassets */; };
+		CAB1F340292463620064ADAE /* ImagePicker2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1F33F292463620064ADAE /* ImagePicker2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		BE17A9AE28E3A4B9005689E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BE17A9B028E3A4BC005689E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE17A9B328E3A4BC005689E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CAB1F33F292463620064ADAE /* ImagePicker2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				BBCA60502926FF3900445E5E /* ImageViewer.swift */,
 				BE17A9B228E3A4BC005689E8 /* Preview Content */,
 				5E78FCAB28F8CF150097DD3B /* CreateListingView.swift */,
+				CAB1F33F292463620064ADAE /* ImagePicker2.swift */,
 				5EBCAFA52908A4BD00EFEE1D /* Listing.swift */,
 				5EBCAFA72908A4E300EFEE1D /* ListingView.swift */,
 				5E78FCB02911D9DE0097DD3B /* LocationView.swift */,
@@ -227,6 +230,7 @@
 				5E78FCAF290B48FC0097DD3B /* MapModel.swift in Sources */,
 				BBD7F63A2939751300AF62BB /* ImageStorage.swift in Sources */,
 				BB462DB4290B1A6C003B6597 /* Model.swift in Sources */,
+				CAB1F340292463620064ADAE /* ImagePicker2.swift in Sources */,
 				BE17A9AF28E3A4B9005689E8 /* ContentView.swift in Sources */,
 				BBCA60512926FF3900445E5E /* ImageViewer.swift in Sources */,
 				5E78FCAC28F8CF150097DD3B /* CreateListingView.swift in Sources */,
