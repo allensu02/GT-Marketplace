@@ -45,9 +45,9 @@ final class Model: ObservableObject {
             }
     }
     
-    func pushListing(title: String, price: Int) {
+  func pushListing(title: String, price: Int, id: UUID){
       var newListing = Listing()
-      newListing.id = UUID()
+      newListing.id = id
       newListing.title = title
       newListing.price = price
       ref.child("Listings/" + newListing.id.uuidString).setValue(newListing.toDictionary)

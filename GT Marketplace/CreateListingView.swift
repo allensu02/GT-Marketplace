@@ -10,7 +10,7 @@ import MapKit
 import UIKit
 
 struct CreateListingView: View {
-    private var numberOfImages = 4
+    private var numberOfImages = 3
     private  let timer = Timer.publish(every: 10, on:
             .main, in: .common).autoconnect()
     @State private var currentIndex = 0;
@@ -20,10 +20,9 @@ struct CreateListingView: View {
     @State private var price = 0
     @State private var priceToggle: Bool = false
     private let numberFormatter: NumberFormatter
-    
-  
     var model = Model()
-    
+    var imageView = ImageViewer()
+    let id = UUID()
     
     func previous() {
         withAnimation {
@@ -67,13 +66,8 @@ struct CreateListingView: View {
                   Text("Listing Details")
                     .padding()
                   TabView(selection: $currentIndex) {
-                    ForEach(1..<numberOfImages + 1, id: \.self){ num in
-                      Image("\(num)")
-                        .resizable()
-                        .scaledToFill()
-                        .overlay(Color.black.opacity(0.4))
-                        .tag(num)
-                      
+                    ForEach(1..<4){_ in
+                      imageView
                     }
                   }.tabViewStyle(PageTabViewStyle())
                     .clipShape(RoundedRectangle(cornerRadius: 5))
@@ -84,6 +78,14 @@ struct CreateListingView: View {
                       next()
                     })
                   controls
+                  Spacer()
+                  Button {
+                    for photo in imageView.listingImages {
+                      imageView.uploadPhoto(id: id, selectedImage: photo)
+                    }
+                  } label: {
+                    Text("Upload Photos")
+                  }
                   TextField("Title", text: $title)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
@@ -98,16 +100,16 @@ struct CreateListingView: View {
                         Text("Free")
                       })
                     .toggleStyle(SwitchToggleStyle(tint: Color.purple))
+                    TextField("Description", text: $description)
+                      .textFieldStyle(RoundedBorderTextFieldStyle())
+                      .padding()
+                    Text(category)
+                      .textFieldStyle(RoundedBorderTextFieldStyle())
+                      .padding()
                   }
-                  TextField("Description", text: $description)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-                  Text(category)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
                   LocationView()
                   Button {
-                    model.pushListing(title: title, price: price)
+                    model.pushListing(title: title, price: price, id: id)
                   } label: {
                     Text("Add Listing")
                   }
