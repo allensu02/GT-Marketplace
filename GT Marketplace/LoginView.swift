@@ -94,7 +94,7 @@ struct LoginView: View {
                 
                 Text("New to GT Marketplace? ")
                 NavigationLink("Sign Up") {
-                    SignUpView()
+                    
                 }
                 .foregroundColor(.blue)
                 Spacer()

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		357ECB59293975F400F74139 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357ECB58293975F400F74139 /* LoginView.swift */; };
 		518F3CA128E65B4B0046F8EB /* SlideshowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518F3CA028E65B4B0046F8EB /* SlideshowView.swift */; };
 		5E78FCAC28F8CF150097DD3B /* CreateListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78FCAB28F8CF150097DD3B /* CreateListingView.swift */; };
 		5E78FCAF290B48FC0097DD3B /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78FCAE290B48FC0097DD3B /* MapModel.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		357ECB58293975F400F74139 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		518F3CA028E65B4B0046F8EB /* SlideshowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideshowView.swift; sourceTree = "<group>"; };
 		5E78FCAB28F8CF150097DD3B /* CreateListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateListingView.swift; sourceTree = "<group>"; };
 		5E78FCAD290B487F0097DD3B /* GT-Marketplace-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GT-Marketplace-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -89,6 +91,7 @@
 				BB462DB3290B1A6C003B6597 /* Model.swift */,
 				5E78FCAE290B48FC0097DD3B /* MapModel.swift */,
 				5E78FCB02911D9DE0097DD3B /* LocationView.swift */,
+				357ECB58293975F400F74139 /* LoginView.swift */,
 			);
 			path = "GT Marketplace";
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				BE17A9AD28E3A4B9005689E8 /* GT_MarketplaceApp.swift in Sources */,
 				518F3CA128E65B4B0046F8EB /* SlideshowView.swift in Sources */,
 				5E78FCB12911D9DE0097DD3B /* LocationView.swift in Sources */,
+				357ECB59293975F400F74139 /* LoginView.swift in Sources */,
 				5EBCAFA82908A4E300EFEE1D /* ListingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
