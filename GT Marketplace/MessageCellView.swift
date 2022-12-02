@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct MessageCellView: View {
+    let name: String
+    let message: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text(name)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            Text(message)
+                .frame(maxWidth: .infinity, alignment: .trailing)
+        }
+        .padding()
+        
     }
 }
 
 struct MessageCellView_Previews: PreviewProvider {
     static var previews: some View {
-        MessageCellView()
+        MessageCellView(name: "Mark", message: "HI")
     }
 }

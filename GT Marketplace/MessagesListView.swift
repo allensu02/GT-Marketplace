@@ -8,8 +8,29 @@
 import SwiftUI
 
 struct MessagesListView: View {
+    let samples = ["Allen", "Mark", "Adi"]
+    @State private var searchText = ""
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            NavigationView {
+                List {
+                    ForEach(searchFound, id: \.self) { sample in NavigationLink(destination: Text(sample)) { MessageCellView(name: sample, message: "Temp Message")
+                        }
+
+                    }
+                }
+                .searchable(text: $searchText)
+                .navigationTitle("Messages")
+            }
+        }
+    }
+    var searchFound: [String] {
+        if searchText.isEmpty {
+            return samples
+        } else {
+            return samples.filter { $0.contains(searchText) }
+        }
     }
 }
 
