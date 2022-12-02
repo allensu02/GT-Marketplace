@@ -29,6 +29,7 @@ struct ChatContentView: View {
             .background(Color("Peach"))
             
             MessageField()
+                .environmentObject(messagesManager)
         }
     }
 }
