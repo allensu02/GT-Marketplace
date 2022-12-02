@@ -29,6 +29,7 @@
 		BBCA60512926FF3900445E5E /* ImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCA60502926FF3900445E5E /* ImageViewer.swift */; };
 		BBCA60532926FF5E00445E5E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCA60522926FF5E00445E5E /* ImagePicker.swift */; };
 		BBCA60562926FF7500445E5E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BBCA60552926FF7500445E5E /* FirebaseStorage */; };
+		BBD7F63A2939751300AF62BB /* ImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD7F6392939751300AF62BB /* ImageStorage.swift */; };
 		BE17A9AD28E3A4B9005689E8 /* GT_MarketplaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE17A9AC28E3A4B9005689E8 /* GT_MarketplaceApp.swift */; };
 		BE17A9AF28E3A4B9005689E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE17A9AE28E3A4B9005689E8 /* ContentView.swift */; };
 		BE17A9B128E3A4BC005689E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE17A9B028E3A4BC005689E8 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		BBA00D8F291B3ACB001782F3 /* NavigationBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		BBCA60502926FF3900445E5E /* ImageViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewer.swift; sourceTree = "<group>"; };
 		BBCA60522926FF5E00445E5E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		BBD7F6392939751300AF62BB /* ImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStorage.swift; sourceTree = "<group>"; };
 		BE17A9A928E3A4B9005689E8 /* GT Marketplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GT Marketplace.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE17A9AC28E3A4B9005689E8 /* GT_MarketplaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GT_MarketplaceApp.swift; sourceTree = "<group>"; };
 		BE17A9AE28E3A4B9005689E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				5E78FCAD290B487F0097DD3B /* GT-Marketplace-Info.plist */,
 				BB462DB1290B1984003B6597 /* GoogleService-Info.plist */,
 				518F3CA028E65B4B0046F8EB /* SlideshowView.swift */,
+				BBD7F6392939751300AF62BB /* ImageStorage.swift */,
 				BE17A9AC28E3A4B9005689E8 /* GT_MarketplaceApp.swift */,
 				BE17A9AE28E3A4B9005689E8 /* ContentView.swift */,
 				BE17A9B028E3A4BC005689E8 /* Assets.xcassets */,
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E78FCAF290B48FC0097DD3B /* MapModel.swift in Sources */,
+				BBD7F63A2939751300AF62BB /* ImageStorage.swift in Sources */,
 				BB462DB4290B1A6C003B6597 /* Model.swift in Sources */,
 				BE17A9AF28E3A4B9005689E8 /* ContentView.swift in Sources */,
 				BBCA60512926FF3900445E5E /* ImageViewer.swift in Sources */,
